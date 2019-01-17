@@ -1,0 +1,219 @@
+.contact {
+    
+    background-color: $color-opacity5-violet;
+    height: 900px;
+    width: 100%;
+
+    &__wrapper {
+        text-align: center;
+        position: relative;
+    }
+
+    &__icon {
+        padding: 55px 0 20px;
+    }
+
+    &__title {
+        padding-bottom: 150px;
+        color: $color-strong-white;
+
+        @media (min-width: 992px) {
+            padding-bottom: 265px;
+        }
+    }
+
+    &__form {
+        padding: 0 30px;
+        z-index: 20;
+    }
+
+    &__input {
+        padding-bottom: 25px;
+    }
+
+    &__link {
+        padding: 20px 70px;
+        font-family: $font-Proxima-nova-bold;
+        font-size: $font-size-20;
+        color: $color-strong-white;
+        font-style: normal;
+        text-transform: uppercase;
+        background-color: $color-violet;
+        border-radius: 5px;
+        box-shadow: 0px 5px 3px 0px rgba(135,131,176,1);
+
+        &:hover {
+            color: $color-dark-red;
+            box-shadow: none;
+        }
+    }
+}
+
+.input[placeholder] {
+    padding: 25px 28px;
+    font-size: $font-size-18;
+    font-style: italic;
+    background: $color-opacity-white;
+    border: none;
+}
+
+.textarea {
+    margin-bottom: 60px;
+    padding: 18px 27px;
+    font-size: $font-size-18;
+    font-style: italic;
+    background: $color-opacity-white;
+    border: none;
+
+    &:focus {
+        color: $color-strong-white;
+        background: $color-opacity-white;
+    }
+}
+
+#map {
+    height: 900px;
+	width: 100%;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.5;
+}
+
+.button-to-top {
+    position: absolute;
+    bottom: -1%;
+    right: 10%;
+    height: 85px;
+    width: 85px;
+    background-color: $color-violet;
+    z-index: 20;
+    cursor: pointer;
+
+    &:hover {
+        transition: $transition-base;
+        transform: scale(1.2);
+
+        .arrow-up {
+            border-top: 2px solid $color-dark-red;
+            border-left: 2px solid $color-dark-red;
+        }
+    }
+
+    @media (max-width: 600px) {
+       display: none;
+    }
+}
+
+.arrow-up {
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid $color-strong-white;
+    border-left: 2px solid $color-strong-white;
+    transform: rotate(45deg);
+    z-index: 20;
+}
+
+.house {
+
+    &__box {
+        position: absolute;
+        right: 0;
+        top: 22%;
+        z-index: 20;
+    }
+
+    &__link {
+        display: flex;
+        color: $color-gray;
+        align-items: center;
+
+        &:hover {
+            color: $color-dark-red;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        padding: 21px;
+        background-color: $color-violet;
+    }
+
+
+    &__discription {
+        padding: 15px 30px;
+        text-align: center;
+        background-color: 
+        $color-opacity-white; 
+        
+        span {
+            display: block;
+            line-height: 1;
+        }
+    }
+}
+
+.phone {
+
+    &__box {
+        position: absolute;
+        right: 0;
+        top: 32%;
+        z-index: 20;
+    }
+
+    &__link {
+        display: flex;
+        color: $color-gray;
+        align-items: center;
+
+        &:hover {
+            color: $color-dark-red;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        display: inline-block;
+        padding: 21px;
+        background-color: $color-violet;
+
+    }
+
+
+    &__discription {
+        padding: 31px 48px;
+        text-align: center;
+        background-color: 
+        $color-opacity-white; 
+        
+        span {
+            display: block;
+            line-height: 1;
+        }
+    }
+}
+
+.dontshow {
+    display: none;
+}
+
+@keyframes tremor {
+    0%, 25% {
+        left: -1px;
+        transform: translateX(-4%);
+    }
+    50%, 100% {
+        left: 1px;
+        transform: translateX(4%);
+    }
+}
+
+.wibro {
+    display: block;
+    position: relative;
+    animation: 0.1s tremor ease-out infinite;    
+}

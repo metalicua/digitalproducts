@@ -1,0 +1,93 @@
+.gallery_arrow_left {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 40%;
+        left: 0%;
+        border-top: 2px solid $color-white-gray;
+        border-left: 2px solid $color-white-gray;
+        transform: rotate(-45deg);
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover {
+                border-top: 2px solid $color-dark-red;
+                border-left: 2px solid $color-dark-red;
+        }
+   
+}
+
+.gallery_arrow_right {
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 40%;
+        right: 0%;
+        border-top: 2px solid $color-white-gray;
+        border-right: 2px solid $color-white-gray;
+        transform: rotate(45deg);
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover {
+                border-top: 2px solid $color-dark-red;
+                border-right: 2px solid $color-dark-red;
+        }
+}
+
+.team_arrow_left {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        border-top: 2px solid $color-gray;
+        border-left: 2px solid $color-gray;
+        transform: rotate(-45deg);
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover {
+                border-top: 2px solid $color-dark-red;
+                border-left: 2px solid $color-dark-red;
+        }
+   
+}
+
+.team_arrow_right {
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        border-top: 2px solid $color-gray;
+        border-right: 2px solid $color-gray;
+        transform: rotate(45deg);
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover {
+                border-top: 2px solid $color-dark-red;
+                border-right: 2px solid $color-dark-red;
+        }
+}
+
+@media all and (min-width: 1200px) {
+        .gallery_arrow_left {
+                left: -7%;    
+        }
+
+        .gallery_arrow_right {
+                right: -7%;
+        }
+
+        .team_arrow_left {
+                left: -7%;  
+        }
+
+        .team_arrow_right {
+                right: -7%;
+        }
+}

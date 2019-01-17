@@ -1,0 +1,35 @@
+.gallery {
+    text-align: center;
+    background: url('../img/gallery_bg.jpg') no-repeat center /cover;
+
+    &__wrapper {
+        background-color: $color-opacity5-violet;
+    }
+
+    &__icon {
+        padding: 50px 0 30px;
+    }
+
+    &__title {
+        padding-bottom: 58px;
+    }
+
+    &__link {
+        color: $color-white-gray;
+        border: 1px solid $color-white-gray;
+
+        &:hover {
+            color: $color-white-gray;
+        }
+    }
+
+    &__button {
+        padding-bottom: 60px;
+    }
+
+}
+
+.slider_wrapper {
+    position: relative;
+    padding-bottom: 65px;
+}

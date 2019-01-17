@@ -1,0 +1,37 @@
+.navigation {
+
+    &__item {
+        margin-right: 28px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            transition: $transition-base;
+            transform: scale(1.2);
+        }
+    }
+
+    &__link {
+        font-family: $font-proxima-nova-semibold;
+        font-size: $font-size-24;
+        text-transform: uppercase;
+        color: $color-white;
+
+        &:hover {
+            color: $color-dark-red;
+            text-decoration: none;
+        }
+     
+    }
+
+}
+
+.active {
+    color: $color-dark-red;
+}
+
+.navbar {
+    padding: 0;
+}

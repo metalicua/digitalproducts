@@ -1,0 +1,19 @@
+.slick-dots li button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $color-white-gray;
+    border-radius: 50%;
+}
+
+.slick-dots {
+    bottom: -59px;
+}
+
+.slick-dots li {
+    margin: 0;
+}
+
+.slick-dots li.slick-active button {
+    background-color: $color-white-gray;
+}

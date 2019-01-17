@@ -1,0 +1,94 @@
+.services {
+    background-color: $color-bg-white;
+
+
+    &__box {
+        padding: 100px 0 130px;
+        text-align: center;
+        color: $color-gray;
+    }
+
+    &__bggray {
+        background-color: $color-white-gray;
+    }
+
+    &__development {
+        background-color: $color-not-white;
+    }
+
+    &__ourservices {
+        
+        text-align: center;
+        background: url('../img/services_image.jpg') no-repeat center /cover;
+    } 
+
+ 
+
+    &__icon {
+        padding-bottom: 25px;
+    }
+
+    &__title {
+        letter-spacing: -1.5px;
+        padding-bottom: 10px;
+    }
+
+    &__discription {
+        font-size: $font-size-18;
+        padding: 0 70px;
+        letter-spacing: -0.5px;
+    }
+
+    &__big-box {
+        padding-top: 115px;
+    }
+
+    &__title_big-box {
+        padding-bottom: 110px;
+        letter-spacing: -1.5px;
+    }
+
+    &__discription_big-box {
+        padding: 0 20px;
+        font-size: $font-size-18;
+        letter-spacing: -0.5px;
+
+        p {
+            margin: 0;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__link {
+
+        &:hover {
+
+            div {
+                transition: $transition-base;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@media (min-width: 992px){
+
+    .services {
+
+        &__row {
+            margin: 0 -30px;
+        }
+    
+        &__row-box {
+            margin-right: 5px;
+        }
+    
+        &__ourservices {
+            margin: 0 -20px;
+        } 
+    }
+ 
+}

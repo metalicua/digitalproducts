@@ -1,0 +1,41 @@
+.footer {
+    padding: 75px 0;
+    background-color: $color-violet;
+    z-index: 10;
+
+    &__row {
+        justify-content: space-between;
+    }
+
+}
+
+.social {
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 15px;
+        }
+    }
+
+    &__link {
+
+        &:hover {
+
+            svg {
+                transition: $transition-base;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.copiright {
+    font-size: $font-size-18;
+}
