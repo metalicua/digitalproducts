@@ -122,7 +122,7 @@ jQuery(document).ready(function(){
 
     $(window).scroll(function(){
         
-        if ( $(this).scrollTop() > 100 ) {
+        if ( $(this).scrollTop() > 0 ) {
             $($headerContainer)
                 .addClass('fixed')
                 .addClass('wow')
@@ -148,26 +148,28 @@ jQuery(document).ready(function(){
   
 // End Fixed Header
 
- 
-
+$(window).scroll(function () { 
   
-    $(document).scroll(function () {
-    
-        // parallaxing
-        var $movebg = $(window).scrollTop() * -0.3;
-        $('.header').css('background-positionY', ($movebg) + 'px');
-    
-        // add class active to nav a on scroll
-        var scrollPos = $(document).scrollTop() + 50;
-        $('nav a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('nav a').removeClass("active");
-            currLink.addClass("active");
-        }
-        });   
-        
-    });
+    $(".active").toggleClass("active");
 
+   if ( $(window).scrollTop() < $(".header").offset().top-300){
+    $( $( $navLink)[0]).toggleClass("active");
+   }
+   else if ( $(window).scrollTop() < $(".about").offset().top-300){
+    $( $( $navLink)[1]).toggleClass("active");
+   }
+  else if ( $(window).scrollTop() < $(".services").offset().top-300){
+    $( $( $navLink)[2]).toggleClass("active");
+   }
+  else if ( $(window).scrollTop() < $(".gallery").offset().top-300){
+    $( $( $navLink)[3]).toggleClass("active");
+   }
+   else if ( $(window).scrollTop() < $(".contact").offset().top-300){
+    $( $( $navLink)[4]).toggleClass("active");
+   }
+   else{    
+    $( $($navLink)[5]).toggleClass("active");    
+  }
+  
+})
 });

@@ -148,4 +148,31 @@ jQuery(document).ready(function(){
   
 // End Fixed Header
 
+// Active navigation
+
+    $(window).scroll(function () { 
+    
+        $(".active").toggleClass("active");
+
+    if ( $(window).scrollTop() < $(".header").offset().top-300){
+        $( $( $navLink)[0]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".about").offset().top-300){
+        $( $( $navLink)[1]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".services").offset().top-300){
+        $( $( $navLink)[2]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".gallery").offset().top-300){
+        $( $( $navLink)[3]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".contact").offset().top-300){
+        $( $( $navLink)[4]).toggleClass("active");
+    }
+    else{    
+        $( $($navLink)[5]).toggleClass("active");    
+    }
+    
+    })
+// End Active navigation
 });
