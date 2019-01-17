@@ -19,7 +19,7 @@ jQuery(document).ready(function(){
     var $phoneDiscript = $('.phone__discription');
     var $phone = $('.js_phone');
     
-    $($link).on('click', function () {
+    $($link).on('click', function (event) {
         
         event.preventDefault()
     });
@@ -80,7 +80,7 @@ jQuery(document).ready(function(){
 // Navigation
     $($navLink).on('click', function () {
         var $value = $(this).data('name');
-        event.preventDefault()
+       
 
         $($navLink)
             .removeClass('active')
@@ -107,7 +107,7 @@ jQuery(document).ready(function(){
     });
 
     $($phoneBox).on('click', function () {
-        event.preventDefault()
+        
         $($phoneDiscript)
             .toggleClass('dontshow')    
             .toggleClass('bounceInRight');
