@@ -23,6 +23,8 @@ jQuery(document).ready(function(){
         
         event.preventDefault()
     });
+
+// Gallery Slider 
  
     $($slider).slick({
         dots: true,
@@ -30,6 +32,10 @@ jQuery(document).ready(function(){
         prevArrow: $($arrowLeft),
         nextArrow: $($arrowRight),
     });
+
+// End Gallery Slider
+
+// Responsive Slider
 
     $($teamSlider).slick ({
         infinite: true,
@@ -55,6 +61,10 @@ jQuery(document).ready(function(){
         ]
     });
 
+// End Responsive Slider
+
+// Scroll to top
+
     $($buttonToTop).click(function(){
        
         $('html, body')
@@ -65,6 +75,9 @@ jQuery(document).ready(function(){
             .removeClass('active')
     });
 
+// End Scroll to top
+
+// Navigation
     $($navLink).on('click', function () {
         var $value = $(this).data('name');
         event.preventDefault()
@@ -83,6 +96,9 @@ jQuery(document).ready(function(){
             .position().top}, 3000);
             
     })
+// End Navigation
+
+// Contact button
 
     $($homeBox).on('click', function () {
         $($homeDiscript)
@@ -91,6 +107,7 @@ jQuery(document).ready(function(){
     });
 
     $($phoneBox).on('click', function () {
+        event.preventDefault()
         $($phoneDiscript)
             .toggleClass('dontshow')    
             .toggleClass('bounceInRight');
@@ -99,19 +116,30 @@ jQuery(document).ready(function(){
             .toggleClass('wibro');
     });
 
+// END Contact button
+
 // Fixed Header
 
     $(window).scroll(function(){
         
         if ( $(this).scrollTop() > 0 ) {
-            $($headerContainer).addClass('fixed');
-            $($headerContainer).removeClass('container');
-            $($headerContainer).width($('.container').width('.container'));
-            $('.header__box').css({'padding-top': '430px'});
+            $($headerContainer)
+                .addClass('fixed')
+                .addClass('zoomIn')
+                .removeClass('container');
+                
+            $('.header__box')
+                .css({'padding-top': '430px'});
+
         } else {
-            $($headerContainer).removeClass('fixed');
-            $($headerContainer).addClass('container');
-            $('.header__box').css({'padding-top': '285px'})
+
+            $($headerContainer)
+                .removeClass('fixed')   
+                .removeClass('zoomIn')         
+                .addClass('container');
+
+            $('.header__box')
+            .css({'padding-top': '285px'})
             
         }
     });
