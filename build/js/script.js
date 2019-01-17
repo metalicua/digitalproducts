@@ -148,5 +148,26 @@ jQuery(document).ready(function(){
   
 // End Fixed Header
 
+ 
+
+  
+    $(document).scroll(function () {
+    
+        // parallaxing
+        var $movebg = $(window).scrollTop() * -0.3;
+        $('.header').css('background-positionY', ($movebg) + 'px');
+    
+        // add class active to nav a on scroll
+        var scrollPos = $(document).scrollTop() + 50;
+        $('nav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('nav a').removeClass("active");
+            currLink.addClass("active");
+        }
+        });   
+        
+    });
 
 });

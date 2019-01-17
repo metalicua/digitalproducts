@@ -122,7 +122,7 @@ jQuery(document).ready(function(){
 
     $(window).scroll(function(){
         
-        if ( $(this).scrollTop() > 100 ) {
+        if ( $(this).scrollTop() > 0 ) {
             $($headerContainer)
                 .addClass('fixed')
                 .addClass('wow')
@@ -147,6 +147,5 @@ jQuery(document).ready(function(){
     });
   
 // End Fixed Header
-
 
 });
