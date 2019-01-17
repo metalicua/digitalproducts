@@ -19,7 +19,6 @@
   <!-- Script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/slick.js"></script>
@@ -101,17 +100,17 @@
                     </svg>  
                   </a>
                 </div>
-                <nav class="navbar navbar-expand-lg navbar-light ml-auto">
+                <nav class="navbar navbar-expand-md navbar-light ml-auto">
                   <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button> 
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto js_nav_list">
                       <li class="nav-item navigation__item">
-                        <a class="navigation__link" href="#" data-name=".header">Home</a>
+                        <a class="navigation__link" href=".header" data-name=".header">Home</a>
                       </li>
                       <li class="nav-item navigation__item">
-                        <a class="navigation__link" href="#" data-name=".about">About</a>
+                        <a class="navigation__link" href="#about" data-name=".about">About</a>
                       </li>
                       <li class="nav-item navigation__item">
                         <a class="navigation__link" href="#" data-name=".services">Services</a>
@@ -139,7 +138,7 @@
       </div>
     </div>
   </header> 
-  <section class="about">
+  <section class="about wow fadeInRight" id="#about">
     <div class="container">
       <div class="row  about__row">
         <div class="col-md-4 col-sm-12 about__image">
@@ -173,7 +172,7 @@
       </div>
     </div>
   </section>
-  <section class="services">
+  <section class="services wow fadeInLeft">
     <div class="container">
       <div class="row services__row">
         <div class="col-md-8 col-sm-12">
@@ -261,7 +260,7 @@
       </div>
     </div>
   </section>
-  <section class="gallery">
+  <section class="gallery wow fadeInRight">
     <div class="gallery__wrapper">
       <div class="container">
         <div class="gallery__icon">
@@ -321,7 +320,7 @@
     </div>
     </div>
   </section>
-  <section class="team">
+  <section class="team wow fadeInLeft">
     <div class="container">
       <div class="team__icon">
           <svg class="team-icon">
@@ -629,7 +628,7 @@
       </div>
     </div>
   </section>
-  <section class="contact">
+  <section class="contact wow flip">
     <div id="map">
 
     </div>
@@ -692,7 +691,7 @@
        </div>
     </div>
   </section>
-  <footer class="footer">
+  <footer class="footer wow fadeInUp">
     <div class="container">
       <div class="footer__row row">
         <div class="copiright">
@@ -740,5 +739,9 @@
       </div>
     </div>
   </footer>
+  <script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>

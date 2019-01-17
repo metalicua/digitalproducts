@@ -45,14 +45,14 @@ jQuery(document).ready(function(){
         nextArrow: $($teamArrowRight),
         responsive: [
             {
-            breakpoint: 860,
+            breakpoint: 992,
             settings: {
             slidesToShow: 2,
             slidesToScroll: 2
             }
             },
             {
-            breakpoint: 480,
+            breakpoint: 576,
             settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -122,10 +122,11 @@ jQuery(document).ready(function(){
 
     $(window).scroll(function(){
         
-        if ( $(this).scrollTop() > 0 ) {
+        if ( $(this).scrollTop() > 100 ) {
             $($headerContainer)
                 .addClass('fixed')
-                .addClass('zoomIn')
+                .addClass('wow')
+                .addClass('bounceInDown')
                 .removeClass('container');
                 
             $('.header__box')
@@ -134,8 +135,9 @@ jQuery(document).ready(function(){
         } else {
 
             $($headerContainer)
-                .removeClass('fixed')   
-                .removeClass('zoomIn')         
+                .removeClass('fixed')  
+                .removeClass('wow') 
+                .removeClass('bounceInDown')         
                 .addClass('container');
 
             $('.header__box')
@@ -143,7 +145,8 @@ jQuery(document).ready(function(){
             
         }
     });
-
   
 // End Fixed Header
+
+
 });
