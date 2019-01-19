@@ -124,14 +124,12 @@ jQuery(document).ready(function(){
         if ( $(this).scrollTop() > 150 ) {
             $($header)
                 .addClass('fixed')
-                .addClass('bounceInDown')
                 .removeClass('container');
                 
         } 
         else {
             $($header)
-                .removeClass('fixed')  
-                .removeClass('bounceInDown')         
+                .removeClass('fixed')         
                 .addClass('container');
 
            
