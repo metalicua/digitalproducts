@@ -1,14 +1,11 @@
 .header {
-    
-    background: url('../img/header_bg.jpg') no-repeat center /cover;
-
-    &__wrapper {
-        background-color: $color-opacity-violet;
-    }
-
-    &__container {
-        z-index: 100;
-    }
+    padding-top: 35px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    transition: $transition-base;
+    z-index: 100;
 
     &__link {
 
@@ -21,32 +18,17 @@
             }
         }
     }
-
+ 
     &__box {
-        padding: 285px 0 510px 0;
-    }
-
-    &__top {
         display: flex;
-        padding-top: 35px;
-    }
-
-    &__title {
-        text-align: center;
-    }
-
-    &__discription {
-        padding: 0 35px;
-        text-align: center;
-        font-style: italic;
-        font-size: $font-size-30;
-    }
+        padding-top: 35px 15px;
+    }  
 }
 
 .fixed {
     position: fixed;
-    right: 0;
-    left: 0;
-    padding: 0 5% 15px;
+    width: 100%;
+    padding: 10px 5%;
     background-color: $color-opacity-violet;
+    transform: translate(-50%, 0%);
 }

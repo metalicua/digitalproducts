@@ -4,11 +4,14 @@
 }
 
 body {
-  margin-top: -24px;
   font-family: $font-default;
   color: $color-white;
 }
 
 img {
   max-width: 100%;
+}
+
+.sprite {
+  height: 0;
 }

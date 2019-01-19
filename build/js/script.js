@@ -10,7 +10,6 @@ jQuery(document).ready(function(){
     var $teamArrowRight = $('.js_team_arrow_right');
     var $buttonToTop = $('.js_button_to_top');
     var $header = $('.header');
-    var $headerContainer = $('.header__container');
     var $navLink = $('.js_nav_list a');
     var $link = $('a');
     var $homeBox = $('.house__box');
@@ -122,54 +121,51 @@ jQuery(document).ready(function(){
 
     $(window).scroll(function(){
         
-        if ( $(this).scrollTop() > 0 ) {
-            $($headerContainer)
+        if ( $(this).scrollTop() > 150 ) {
+            $($header)
                 .addClass('fixed')
-                .addClass('wow')
                 .addClass('bounceInDown')
                 .removeClass('container');
                 
-            $('.header__box')
-                .css({'padding-top': '430px'});
-
-        } else {
-
-            $($headerContainer)
+        } 
+        else {
+            $($header)
                 .removeClass('fixed')  
-                .removeClass('wow') 
                 .removeClass('bounceInDown')         
                 .addClass('container');
 
-            $('.header__box')
-            .css({'padding-top': '285px'})
+           
             
         }
     });
   
 // End Fixed Header
 
-$(window).scroll(function () { 
-  
-    $(".active").toggleClass("active");
+// Active navigation
 
-   if ( $(window).scrollTop() < $(".header").offset().top-300){
-    $( $( $navLink)[0]).toggleClass("active");
-   }
-   else if ( $(window).scrollTop() < $(".about").offset().top-300){
-    $( $( $navLink)[1]).toggleClass("active");
-   }
-  else if ( $(window).scrollTop() < $(".services").offset().top-300){
-    $( $( $navLink)[2]).toggleClass("active");
-   }
-  else if ( $(window).scrollTop() < $(".gallery").offset().top-300){
-    $( $( $navLink)[3]).toggleClass("active");
-   }
-   else if ( $(window).scrollTop() < $(".contact").offset().top-300){
-    $( $( $navLink)[4]).toggleClass("active");
-   }
-   else{    
-    $( $($navLink)[5]).toggleClass("active");    
-  }
-  
-})
+    $(window).scroll(function () { 
+    
+        $(".active").toggleClass("active");
+
+    if ( $(window).scrollTop() < $(".header").offset().top-300){
+        $( $( $navLink)[0]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".about").offset().top-300){
+        $( $( $navLink)[1]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".services").offset().top-300){
+        $( $( $navLink)[2]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".gallery").offset().top-300){
+        $( $( $navLink)[3]).toggleClass("active");
+    }
+    else if ( $(window).scrollTop() < $(".contact").offset().top-300){
+        $( $( $navLink)[4]).toggleClass("active");
+    }
+    else{    
+        $( $($navLink)[5]).toggleClass("active");    
+    }
+    
+    })
+// End Active navigation
 });

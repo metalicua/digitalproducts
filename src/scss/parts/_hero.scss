@@ -1,0 +1,24 @@
+.hero {
+    background: url('../img/header_bg.jpg') no-repeat center /cover;
+
+    &__wrapper {
+        background-color: $color-opacity-violet;
+    }
+    
+    &__box {
+        padding: 395px 0 510px 0;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__discription {
+        padding: 0 35px;
+        text-align: center;
+        font-style: italic;
+        font-size: $font-size-30;
+    }
+
+    
+}
